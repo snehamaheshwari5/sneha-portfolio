@@ -1,28 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sneha Maheshwari | Data Science Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body class="bg-gray-100 text-gray-800 leading-relaxed">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sneha Maheshwari | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <header class="bg-white shadow-md text-center py-8">
-    <h1 class="text-4xl font-bold">Sneha Maheshwari</h1>
-    <p class="text-lg mt-2">MSc Statistics & Data Science | Aspiring Data Scientist</p>
-  </header>
+    <!-- Tailwind CSS with custom lavender theme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lavender: '#C8A2C8',
+              lavenderDark: '#A678A6',
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white text-lavenderDark">
 
-  <section class="max-w-3xl mx-auto p-6" id="projects">
-    <h2 class="text-2xl font-semibold mb-4">Featured Projects</h2>
-    <div id="projectCards" class="grid gap-4 md:grid-cols-2"></div>
-  </section>
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-6 py-4 shadow-md sticky top-0 bg-white z-10">
+      <h1 class="text-xl font-bold">Sneha Maheshwari</h1>
+      <div class="space-x-4 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#education" class="hover:underline">Education</a>
+        <a href="#awards" class="hover:underline">Awards</a>
+        <a href="#positions" class="hover:underline">POR</a>
+      </div>
+    </nav>
 
-  <footer class="text-center text-gray-500 py-6">
-    © <span id="year"></span> Sneha Maheshwari
-  </footer>
+    <!-- Hero -->
+    <header class="bg-lavender/10 text-center py-12 px-4">
+      <h2 class="text-4xl font-bold mb-2 text-lavenderDark">Aspiring Data Scientist</h2>
+      <p class="text-lg max-w-2xl mx-auto text-lavenderDark">Pursuing MSc in Statistics & Data Science at NMIMS · Passionate about using data for impact</p>
+    </header>
 
-  <script src="js/main.js"></script>
-</body>
+    <!-- About -->
+    <section id="about" class="max-w-4xl mx-auto py-12 px-6">
+      <h3 class="text-2xl font-semibold mb-4">About Me</h3>
+      <p>
+        I’m Sneha Maheshwari, an MSc Statistics & Data Science student at NMIMS, Mumbai. I hold a Bachelor's in Statistics from St. Xavier’s, Kolkata. I love solving real-world problems with data and have explored domains like income inequality, diabetes, and black holes. I’ve led teams as Editor-in-Chief, Finance Head, and currently serve as Vice President in the placement cell.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-lavender/10 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-4">Skills</h3>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <ul class="list-disc list-inside">
+            <li>Python (pandas, scikit-learn, matplotlib)</li>
+            <li>R (ggplot2, dplyr, caret)</li>
+            <li>SQL</li>
+          </ul>
+          <ul class="list-disc list-inside">
+            <li>Machine Learning</li>
+            <li>EDA & Data Cleaning</li>
+            <li>Statistical Inference</li>
+          </ul>
+          <ul class="list-disc list-inside">
+            <li>Git & GitHub</li>
+            <li>Excel</li>
+            <li>Power BI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-6">Projects</h3>
+        <div id="projectCards" class="grid md:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="bg-lavender/10 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-4">Education</h3>
+        <ul class="space-y-2 text-sm">
+          <li><strong>MSc Statistics & Data Science</strong> — NMIMS, Mumbai (2024–2026)</li>
+          <li><strong>BSc (Hons) Statistics</strong> — St. Xavier’s College, Kolkata (2021–2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-4">Awards & Recognition</h3>
+        <ul class="list-disc list-inside text-sm space-y-2">
+          <li>Best Research Poster at National Data Science Conference 2024</li>
+          <li>Dean’s List for Academic Excellence (2023)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Positions of Responsibility -->
+    <section id="positions" class="bg-lavender/10 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-4">Positions of Responsibility</h3>
+        <ul class="list-disc list-inside text-sm space-y-2">
+          <li>Vice President – Placement Cell, NMIMS MSc Stats & Data Science</li>
+          <li>Finance Head – College Society</li>
+          <li>Editor-in-Chief – Academic Magazine, Statistics Dept.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-lavenderDark py-6">
+      &copy; <span id="year"></span> Sneha Maheshwari · 
+      <a href="mailto:sneha@example.com" class="hover:underline">Email Me</a>
+    </footer>
+  </body>
 </html>
