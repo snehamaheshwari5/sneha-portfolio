@@ -1,126 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sneha Maheshwari | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneha Maheshwari | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender: #E6E6FA;
+      --white: #ffffff;
+      --dark: #2c2c2c;
+      --accent: #b497bd;
+    }
 
-    <!-- Tailwind CSS with custom lavender theme -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              lavender: '#C8A2C8',
-              lavenderDark: '#A678A6',
-            },
-          },
-        },
-      };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="js/main.js"></script>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="bg-white text-lavenderDark">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
 
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center px-6 py-4 shadow-md sticky top-0 bg-white z-10">
-      <h1 class="text-xl font-bold">Sneha Maheshwari</h1>
-      <div class="space-x-4 text-sm">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#skills" class="hover:underline">Skills</a>
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#education" class="hover:underline">Education</a>
-        <a href="#awards" class="hover:underline">Awards</a>
-        <a href="#positions" class="hover:underline">POR</a>
-      </div>
-    </nav>
+    body {
+      background-color: var(--white);
+      color: var(--dark);
+      line-height: 1.6;
+    }
 
-    <!-- Hero -->
-    <header class="bg-lavender/10 text-center py-12 px-4">
-      <h2 class="text-4xl font-bold mb-2 text-lavenderDark">Aspiring Data Scientist</h2>
-      <p class="text-lg max-w-2xl mx-auto text-lavenderDark">Pursuing MSc in Statistics & Data Science at NMIMS · Passionate about using data for impact</p>
-    </header>
+    header {
+      background: var(--lavender);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-    <!-- About -->
-    <section id="about" class="max-w-4xl mx-auto py-12 px-6">
-      <h3 class="text-2xl font-semibold mb-4">About Me</h3>
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--dark);
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--lavender);
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .card {
+      background: var(--lavender);
+      margin-bottom: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sneha Maheshwari</h1>
+    <p>MSc Statistics & Data Science | Aspiring Data Scientist</p>
+  </header>
+
+<section>
+  <h2>About Me</h2>
+  <div class="card" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 250px;">
       <p>
-        I’m Sneha Maheshwari, an MSc Statistics & Data Science student at NMIMS, Mumbai. I hold a Bachelor's in Statistics from St. Xavier’s, Kolkata. I love solving real-world problems with data and have explored domains like income inequality, diabetes, and black holes. I’ve led teams as Editor-in-Chief, Finance Head, and currently serve as Vice President in the placement cell.
+        I ask a lot of questions — the kind that dig beneath the surface and chase patterns hiding in plain sight.
+        Numbers, to me, aren’t just values; they’re stories waiting to be told, decisions waiting to be made smarter.
+        I’m drawn to problems that don’t have easy answers, and I love the process of breaking them down — through data,
+        through logic, and sometimes through sheer persistence. Whether I’m building a model, leading a team, or shaping
+        a narrative, I’m always looking for the intersection where curiosity meets impact.
       </p>
-    </section>
+    </div>
+    <img src="images/my_photo.jpg" alt="Sneha Maheshwari" style="width: 180px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+  </div>
+</section>
 
-    <!-- Skills -->
-    <section id="skills" class="bg-lavender/10 py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-semibold mb-4">Skills</h3>
-        <div class="grid md:grid-cols-3 gap-4 text-sm">
-          <ul class="list-disc list-inside">
-            <li>Python (pandas, scikit-learn, matplotlib)</li>
-            <li>R (ggplot2, dplyr, caret)</li>
-            <li>SQL</li>
-          </ul>
-          <ul class="list-disc list-inside">
-            <li>Machine Learning</li>
-            <li>EDA & Data Cleaning</li>
-            <li>Statistical Inference</li>
-          </ul>
-          <ul class="list-disc list-inside">
-            <li>Git & GitHub</li>
-            <li>Excel</li>
-            <li>Power BI</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-semibold mb-6">Projects</h3>
-        <div id="projectCards" class="grid md:grid-cols-2 gap-6"></div>
-      </div>
-    </section>
 
-    <!-- Education -->
-    <section id="education" class="bg-lavender/10 py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-semibold mb-4">Education</h3>
-        <ul class="space-y-2 text-sm">
-          <li><strong>MSc Statistics & Data Science</strong> — NMIMS, Mumbai (2024–2026)</li>
-          <li><strong>BSc (Hons) Statistics</strong> — St. Xavier’s College, Kolkata (2021–2024)</li>
-        </ul>
-      </div>
-    </section>
+  <section>
+    <h2>Skills</h2>
+    <div class="card skills-grid">
+      <div>Python</div>
+      <div>R</div>
+      <div>SQL</div>
+      <div>Excel</div>
+      <div>Machine Learning</div>
+      <div>Data Visualization</div>
+      <div>Power BI</div>
+      <div>Statistics</div>
+    </div>
+  </section>
 
-    <!-- Awards -->
-    <section id="awards" class="py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-semibold mb-4">Awards & Recognition</h3>
-        <ul class="list-disc list-inside text-sm space-y-2">
-          <li>Best Research Poster at National Data Science Conference 2024</li>
-          <li>Dean’s List for Academic Excellence (2023)</li>
-        </ul>
-      </div>
-    </section>
+  <section>
+    <h2>Projects</h2>
+    <div class="card">
+      <p><strong>Income Inequality Analysis</strong><br>
+      Visualized global income gaps using Gini coefficients and regression.</p>
+    </div>
+    <div class="card">
+      <p><strong>Diabetes Prediction Model</strong><br>
+      Built a logistic regression model to predict diabetes using patient data.</p>
+    </div>
+  </section>
 
-    <!-- Positions of Responsibility -->
-    <section id="positions" class="bg-lavender/10 py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-semibold mb-4">Positions of Responsibility</h3>
-        <ul class="list-disc list-inside text-sm space-y-2">
-          <li>Vice President – Placement Cell, NMIMS MSc Stats & Data Science</li>
-          <li>Finance Head – College Society</li>
-          <li>Editor-in-Chief – Academic Magazine, Statistics Dept.</li>
-        </ul>
-      </div>
-    </section>
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <p><strong>MSc Statistics and Data Science</strong><br>
+      NMIMS, Mumbai</p>
+    </div>
+    <div class="card">
+      <p><strong>BSc in Statistics</strong><br>
+      St. Xavier’s College, Kolkata</p>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-sm text-lavenderDark py-6">
-      &copy; <span id="year"></span> Sneha Maheshwari · 
-      <a href="mailto:sneha@example.com" class="hover:underline">Email Me</a>
-    </footer>
-  </body>
+  <section>
+    <h2>Awards</h2>
+    <div class="card">
+      <ul>
+        <li>Merit Scholarship, NMIMS</li>
+        <li>Best Research Poster – Dept. Fest, 2024</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Positions of Responsibility</h2>
+    <div class="card">
+      <ul>
+        <li>Vice President – Placement Cell, NSOMASA</li>
+        <li>Finance Head – College Society</li>
+        <li>Editor-in-Chief – Academic Magazine</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+  <h2>Resume</h2>
+  <div class="card" style="text-align: center;">
+    <p>You can view or download my resume below.</p>
+    
+    <!-- View Online Button -->
+    <a href="files/Resume.pdf" target="_blank" style="display: inline-block; margin: 0.5rem; padding: 0.7rem 1.5rem; background-color: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+      View Resume (PDF)
+    </a>
+
+    <!-- Download Button -->
+    <a href="files/Resume.pdf" download style="display: inline-block; margin: 0.5rem; padding: 0.7rem 1.5rem; background-color: var(--dark); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+      Download Resume
+    </a>
+  </div>
+</section>
+
+
+  <footer>
+    © 2025 Sneha Maheshwari • All rights reserved
+  </footer>
+
+
+
+</body>
 </html>
